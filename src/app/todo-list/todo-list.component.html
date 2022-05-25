@@ -1,0 +1,9 @@
+<h1>To Do List</h1>
+<form #todoForm="ngForm" (ngSubmit)="addTask(todoForm.value)">
+    <input type="text" name="task_name" ngModel #item placeholder="Enter Task">
+    <button>Add Task</button>
+</form>
+
+<ul *ngFor="let listItem of taskList">
+    <li>{{listItem.name.task_name}} <a href="javaScript:void(0);" (click)="removeTask(listItem.id)">Remove</a></li>
+</ul>

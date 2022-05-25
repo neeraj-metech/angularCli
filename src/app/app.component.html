@@ -1,0 +1,96 @@
+<app-header></app-header>
+<!-- <app-todo-list></app-todo-list> -->
+
+<!-- Getting Data from child compoment -->
+<app-child [childData]="items" (parentData)="addItem($event)"></app-child>
+<ul>
+    <li *ngFor="let item of items">{{item.item | textFormate}} <span (click)="removeItem(item.id)">Remove</span></li>
+</ul>
+
+<!-- <form #myForm="ngForm" (ngSubmit)="getFormData(myForm.value)">
+    <input type="text" ngModel name="name" placeholder="Enter your name"><br /><br />
+    <input type="text" ngModel name="email" placeholder="Enter your email"><br /><br />
+    <input type="text" ngModel  name="phone" placeholder="Enter your phone"><br /><br />
+    <button>Submit</button>
+</form> -->
+
+<!-- 
+    https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
+    Set-ExecutionPolicy --ExecutionPolicy AllSigned
+Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser -->
+<!-- Input box event start -->
+<!-- <input type="text" name="name" #name  >
+<button (click)="getName(name.value)">Click Me!</button> 
+<p>{{nameInput}}</p> -->
+<!-- click,keyup,keydown,input,blur -->
+<!-- Input box event end -->
+
+
+
+<!-- make a increment/decrement counter -->
+<!-- <p>{{count}}</p>
+<button (click)="counter('plus')">Increment ++</button>
+<button (click)="counter('min')">Decrement --</button> -->
+
+<!-- property binding -->
+<!-- <input type="text" name="user-first" value="peter first" disabled="{{disable}}">
+<input type="text" name="user" value="peter second"  [disabled]="disable"> -->
+
+
+<!-- if else condition -->
+<!-- <p *ngIf="show then ifBlock else eleseBlock">If else condition</p> -->
+<!-- <p *ngIf="show=='yes'; then ifBlock else eleseBlock">If else condition</p> -->
+<!-- <ng-template #ifBlock>
+<h1>If condition</h1>
+</ng-template>
+<ng-template #eleseBlock>
+<h1>Eles condition</h1>
+</ng-template> -->
+
+
+
+
+<!-- Multi if condition because there in no any else if condition -->
+<!-- <ng-template [ngIf]="color=='red'">
+    <h1 [style.color]="color">This is {{color}} color</h1>
+</ng-template>
+<ng-template [ngIf]="color=='green'">
+    <h1 [style.color]="color">This is {{color}} color</h1>
+</ng-template>
+<ng-template [ngIf]="color=='blue'">
+    <h1 [style.color]="color">This is {{color}} color</h1>
+</ng-template> -->
+
+
+
+<!-- Switch condition -->
+<!-- <div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'" [style.color]="color" > This is red color from Switch case.</h1>
+    <h1 *ngSwitchCase="'green'" [style.color]="color" > This is green color from Switch case.</h1>
+    <h1 *ngSwitchCase="'blue'" [style.color]="color" > This is blue color from Switch case.</h1>
+    <h1 *ngSwitchDefault style="color:yellow;" > This is default color Switch case.</h1>
+</div> -->
+
+
+<!-- for loop && nested loop -->
+<!-- <ul *ngFor="let userDetail of userDetails">
+    <li>
+        {{userDetail.name}}
+    </li>
+    <li>
+        Hobbies
+        <ul *ngFor="let hobbie of userDetail.hobbies">
+            <li>{{hobbie}}</li>
+        </ul>
+    </li>
+</ul> -->
+
+
+
+<!-- style dynamicly -->
+<!-- <h1 [style.color]="color">Style Bindig</h1>
+<button (click)="changeTextColor()">Click Me!</button> -->
+
+
+<!-- Install bootstrap in your application -->
+<!-- ng add @ng-bootstrap/ng-bootstrap -->
