@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm,FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -39,4 +39,13 @@ export class AppComponent {
     console.log(id);
     this.items = this.items.filter(item=>item.id!=id)
   }
+  loginForm = new FormGroup({
+    name:new FormControl('Neeraj kumar'),
+    password:new FormControl('123@123')
+  });
+  loginUser(){
+    console.warn(this.loginForm.value);
+  }
+
+  
 }

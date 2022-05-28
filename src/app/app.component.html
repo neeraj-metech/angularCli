@@ -1,12 +1,31 @@
 <app-header></app-header>
+
 <!-- <app-todo-list></app-todo-list> -->
 
-<!-- Getting Data from child compoment -->
-<app-child [childData]="items" (parentData)="addItem($event)"></app-child>
+<!-- Send data to child || Getting Data from child compoment start -->
+<!-- <app-child [childData]="items" (parentData)="addItem($event)"></app-child>
 <ul>
-    <li *ngFor="let item of items">{{item.item | textFormate}} <span (click)="removeItem(item.id)">Remove</span></li>
-</ul>
+    <li *ngFor="let item of items">
+        {{item.item | textFormate}} <span (click)="removeItem(item.id)">Remove</span>
+    </li>
+</ul> -->
+<!-- Send data to child || Getting Data from child compoment end -->
 
+
+
+<!-- Reactive form Start -->
+<!-- app.component.ts
+    import { NgForm,FormControl, FormGroup } from '@angular/forms';
+    app.module.ts
+    import { FormsModule,ReactiveFormsModule } from "@angular/forms"; -->
+    <!-- <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+        <input type="text" name="name" placeholder="Enter your name" formControlName="name"><br /><br />
+        <input type="password" name="passwrod" placeholder="Enter your name" formControlName="password"><br /><br />
+        <button>Login</button>
+    </form> -->
+<!-- Reactive form end -->
+
+<!-- Template driven form -->
 <!-- <form #myForm="ngForm" (ngSubmit)="getFormData(myForm.value)">
     <input type="text" ngModel name="name" placeholder="Enter your name"><br /><br />
     <input type="text" ngModel name="email" placeholder="Enter your email"><br /><br />
